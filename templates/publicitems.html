@@ -1,0 +1,24 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div class="mdl-grid typography--text-center">
+  <header class="mdl-cell mdl-cell--12-col">
+    <h1>Welcome to the Catalog!</h1>
+    <p>Here you can find a variety of self-grooming related products!!</p>
+  </header>
+</div>
+<div class="mdl-grid">
+  {% for item in items %}
+  <div class="mdl-cell mdl-cell--8-col mdl-cell--6-col-desktop mdl-card mdl-shadow--2dp card-song">
+    <div class="mdl-card__title">
+      <h3 class="mdl-card__title-text">{{item.name}}</h4>
+    </div>
+    <div class="mdl-card__supporting-text">{{item.description}}</div>
+	<div class="mdl-card__actions mdl-card--border">
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" target="_blank">Buy Now</a> 
+    </div> 
+  </div>
+  
+  {% endfor %} {% endblock %}
+</div>
