@@ -284,11 +284,7 @@ def deleteItem(category_id, item_id):
         return render_template('delete-item.html', item = deletedItem)
 
 
-
-
-		
-
-# JSON APIs to view music dump
+# JSON API endpoint
 @app.route('/category/<int:category_id>/<int:item_id>/JSON')
 def itemJSON(category_id, item_id):
     item = session.query(Item).filter_by(id = item_id).one()
